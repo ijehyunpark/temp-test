@@ -6,11 +6,13 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class HttpConnectionTest {
 
 	@Test
+	@Disabled
 	void sendGetTest() throws Exception {
 		HttpConnection hc = new HttpConnection();
 		Map<String, Object> params = new HashMap<String, Object>();
@@ -21,6 +23,7 @@ class HttpConnectionTest {
 	}
 	
 	@Test
+	@Disabled
 	void sendPostTest() throws Exception {
 		HttpConnection hc = new HttpConnection();
 		Map<String, Object> fields = new LinkedHashMap<>();
