@@ -1,0 +1,7 @@
+= covid 상태
+== covid 상태 확인
+include::{snippets}/covid-status-get/request-parameters.adoc[]
+include::{snippets}/covid-status-get/response-fields.adoc[]
+== covid 상태 추가
+include::{snippets}/covid-status-save/request-fields.adoc[]
+include::{snippets}/covid-status-save/response-fields.adoc[]
