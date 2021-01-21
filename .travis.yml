@@ -33,7 +33,7 @@ before_install:
 deploy:
   provider: releases
   api_key: $TOKEN
-  file: "build/libs/*"
+  file: "build/libs/*.jar"
   skip_cleanup: true
   on:
     repo: ijehyunpark/temp-test
