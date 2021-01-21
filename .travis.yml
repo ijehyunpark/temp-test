@@ -11,7 +11,7 @@ cache:
   - "$HOME/.m2/repository"
   - '$HOME/.gradle'
   
-script: "./gradlew clean build -Pprofile=test"
+script: "./gradlew clean build"
 
 services:
   - mysql
@@ -29,6 +29,8 @@ before_install:
   - sudo mysql_upgrade
   - mysql --version  
   - mysql -e 'CREATE DATABASE cbot;'
+  - mysql -u "root -e 'CREATE USER 'springer'@'localhost' IDENTIFIED BY 'springer';"
+  - mysql -u root -e "GRANT ALL ON cbot.* TO 'springer'@'localhost';"
 
 before_deploy:
   - mkdir -p deploy
