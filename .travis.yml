@@ -29,12 +29,23 @@ before_install:
   - sudo mysql_upgrade
   - mysql --version  
   - mysql -e 'CREATE DATABASE cbot;'
+
+before_deploy:
+  - mkdir -p before-deploy # zip에 포함시킬 파일들을 담을 디렉토리 생성 # (1)
+  - cp scripts/*.sh before-deploy/ # (2)
+  - cp appspec.yml before-deploy/
+  - cp build/libs/*.jar before-deploy/
+  - cd before-deploy && zip -r before-deploy * # before-deploy로 이동 후 전체 압축 # (3)
+  - cd ../ && mkdir -p deploy # 상위 디렉토리로 이동 후 deploy 디렉토리 생성
+  - mv before-deploy/before-deploy.zip deploy/freelec-springboot2-webservice.zip # deploy로 zip파일 이동
   
 deploy:
   provider: releases
   api_key: $TOKEN
   file: 
     - "README.md"
+    - "freelec-springboot2-webservice.zip"
+    - "deploy/freelec-springboot2-webservice.zip"
     - "/build/libs/webbot-0.0.1-SNAPSHOT.jar"
   file_glob: true
   skip_cleanup: true
