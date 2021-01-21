@@ -1,5 +1,4 @@
 spring:
-  profiles: local
   jpa:
     show-sql: true
     generate-ddl: true
@@ -8,5 +7,5 @@ spring:
   datasource: #mysql datasource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost/cbot?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
-    username: root
-    password: 
+    username: springer
+    password: springer
