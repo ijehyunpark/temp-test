@@ -33,7 +33,9 @@ before_install:
 deploy:
   provider: releases
   api_key: $TOKEN
-  file: "/build/libs/webbot-0.0.1-SNAPSHOT.jar"
+  file: 
+    - "README.md"
+    - "/build/libs/webbot-0.0.1-SNAPSHOT.jar"
   file_glob: true
   skip_cleanup: true
   on:
