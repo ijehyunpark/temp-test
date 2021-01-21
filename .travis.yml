@@ -31,14 +31,11 @@ before_install:
   - mysql -e 'CREATE DATABASE cbot;'
   
 deploy:
-  - provider: s3
-    access_key_id: $aws_access_key_id
-    secret_access_key: $aws_secret_access_key
-    bucket: springboot-webbot-deploy
-    region: us-east-1
-    skip_cleanup: true
-    acl: public_read
-    wait-until-deployed: true
-    on:
-      repo: ijehyunpark/temp-test
-      branch: master
+  provider: releases
+  api_key: $TOKEN
+  file: "Test"
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
+    repo: ijehyunpark/temp-test
