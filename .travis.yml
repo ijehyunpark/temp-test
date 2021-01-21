@@ -29,3 +29,16 @@ before_install:
   - sudo mysql_upgrade
   - mysql --version  
   - mysql -e 'CREATE DATABASE cbot;'
+  
+deploy:
+  - provider: s3
+    access_key_id: $aws_access_key_id
+    secret_access_key: $aws_secret_access_key
+    bucket: springboot-webbot-deploy
+    region: us-east-1
+    skip_cleanup: true
+    acl: public_read
+    wait-until-deployed: true
+    on:
+      repo: ijehyunpark/temp-test
+      branch: master

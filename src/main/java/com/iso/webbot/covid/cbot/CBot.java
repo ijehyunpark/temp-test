@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Component
 public class CBot {
-	@Scheduled(cron = "*/10 * * * * *")
+	//@Scheduled(cron = "*/10 * * * * *")
 	public void cBotSch() throws Exception {
 		try {
 			log.info("log scheduling");
