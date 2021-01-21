@@ -42,8 +42,9 @@ deploy:
   api_key: $TOKEN
   file: 
     - "README.md"
-    - "freelec-springboot2-webservice.zip"
-    - "deploy/freelec-springboot2-webservice.zip"
+    - "webbot.zip"
+    - "deploy/webbot.zip"
+    - "*.zip"
     - "/build/libs/webbot-0.0.1-SNAPSHOT.jar"
     - "*.jar"
   file_glob: true
