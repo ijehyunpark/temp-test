@@ -1,5 +1,5 @@
 spring:
-  profiles: local
+  profiles: test
   jpa:
     show-sql: true
     generate-ddl: true

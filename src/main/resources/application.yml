@@ -8,4 +8,4 @@ server:
       force: true
 
 spring:
-  profiles:    active: local
+  profiles:    active: dev
