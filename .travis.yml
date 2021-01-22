@@ -42,3 +42,6 @@ deploy:
     tags: true
     branch: master
     repo: ijehyunpark/temp-test
+branches:
+  only:
+    - /^\d+\.\d+\.\d+.*$/
