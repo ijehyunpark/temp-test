@@ -14,7 +14,7 @@ public class GeneralTest {
 	@DisplayName("displayName")
 	@Disabled
 	void test() {
-		List<Integer> numbers = List.of(2, 3, 4, 5);
+		List<Integer> numbers = List.of(1, 3, 4, 5);
 		assertAll(() -> assertEquals(1, numbers.get(0)),
 					() -> assertEquals(1, numbers.get(1)),
 					() -> assertEquals(1, numbers.get(2)),
