@@ -40,8 +40,9 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-    branch: master
+    all_branches: true
     repo: ijehyunpark/temp-test
 branches:
   only:
+    - master
     - /^\d+\.\d+\.\d+.*$/
