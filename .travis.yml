@@ -45,4 +45,4 @@ deploy:
 branches:
   only:
     - master
-    - /^\d+\.\d+\.\d+.*$/
+    - /version-\d{1,}.\d{1,}.{1,}/
