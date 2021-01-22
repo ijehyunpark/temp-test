@@ -44,5 +44,5 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-    all_branches: true
+    branch: master
     repo: ijehyunpark/temp-test
