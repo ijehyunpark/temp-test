@@ -11,7 +11,7 @@ cache:
   - "$HOME/.m2/repository"
   - '$HOME/.gradle'
   
-script: "./gradlew clean build -Dspring.profiles.active=test"
+script: "./gradlew clean build"
 
 services:
   - mysql
