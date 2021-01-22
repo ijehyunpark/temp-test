@@ -44,4 +44,5 @@ deploy:
     repo: ijehyunpark/temp-test
 branches:
   only:
+    - master
     - /^\d+\.\d+\.\d+.*$/
